@@ -626,5 +626,28 @@ window.addEventListener('hashchange',function(){setTimeout(run,60);});
 })();
 </script>
 <!-- TC-PATCH:END -->
+<!-- TC-PATCH2:START -->
+<script>
+(function(){
+  try{
+    if(typeof G==='undefined'||!Array.isArray(G))return;
+    var add=[
+      [/graduation/i,['edu-graduation']],
+      [/team/i,['cultural','cultural-2']]
+    ];
+    G.forEach(function(g){
+      if(!g||!Array.isArray(g[4]))return;
+      var nm=String(g[1]||'');
+      add.forEach(function(a){
+        if(a[0].test(nm)){
+          a[1].forEach(function(k){ if(g[4].indexOf(k)<0) g[4].push(k); });
+        }
+      });
+    });
+    if(typeof route==='function')route();
+  }catch(e){console.info('tc-patch2',e);}
+})();
+</script>
+<!-- TC-PATCH2:END -->
 </body>
 </html>
