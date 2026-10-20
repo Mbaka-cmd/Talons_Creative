@@ -1,0 +1,9 @@
+assets\photos\hero-1.jpg
+assets\photos\p-wedding.jpg
+assets\photos\p-executive.jpg
+assets\photos\p-cultural.jpg
+assets\photos\p-arch.jpg
+assets\photos\p-fashion.jpg
+assets\photos\p-landscape.jpg
+assets\photos\s-corporate.jpg
+assets\photos\s-film.jpg
